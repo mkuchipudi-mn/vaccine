@@ -1,0 +1,56 @@
+{
+  "generator-ngx-rocket": {
+    "version": "9.1.0",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "appName": "vaccine client web",
+      "target": [
+        "web",
+        "cordova",
+        "electron"
+      ],
+      "pwa": true,
+      "mobile": [
+        "ios",
+        "android"
+      ],
+      "desktop": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "ui": "material",
+      "layout": "simple",
+      "auth": true,
+      "lazy": true,
+      "angulartics": true,
+      "languages": [
+        "de-DE",
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "it-IT",
+        "zh-CN"
+      ],
+      "analyticsProvider": "ga",
+      "googleAnalyticsAccount": "",
+      "tools": [
+        "prettier",
+        "hads"
+      ],
+      "utility": [
+        "lodash",
+        "ramda",
+        "moment"
+      ],
+      "deploy": "docker",
+      "projectName": "vaccine-client-web",
+      "packageManager": "npm"
+    }
+  }
+}
