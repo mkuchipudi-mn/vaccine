@@ -1,0 +1,42 @@
+{
+  "form_template": [
+    {
+      "type": "VaccineName",
+      "label": "Vaccine_Name"
+    },
+    {
+      "type": "Description",
+      "label": "Description"
+    },
+    {
+      "type": "Purpose",
+      "label": "Purpose"
+    },
+    {
+      "type": "Usedage",
+      "label": "Usedage"
+    },
+    {
+      "type": "Brand",
+      "label": "Brand"
+    },
+    {
+      "type": "Created_Date",
+      "label": "Created_Date"
+    },
+    {
+      "type": "Updated_Date",
+      "label": "Updated_Date"
+    },
+
+    {
+      "type": "number",
+      "label": "Age"
+    },
+    {
+      "type": "select",
+      "label": "favorite book",
+      "options": ["Jane Eyre", "Pride and Prejudice", "Wuthering Heights"]
+    }
+  ]
+}

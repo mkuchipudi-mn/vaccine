@@ -1,0 +1,189 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3>Register</h3>
+
+            <form  novalidate  #userForm="ngForm"   (ngSubmit)="onSave(userForm.value)">
+               
+                <div class="form-group">
+                    <label>VaccineName</label>
+                    <input type="text" formControlName="username" required  placeholder="Enter Username"/>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" formControlName="username" required  class="form-control" placeholder="Enter Username"/> 
+                </div>
+                <div class="form-group">
+                    <label>Purpose</label>
+                    <input type="text" formControlName="username" required  class="form-control" placeholder="Enter Username"/> 
+                </div>
+                <div class="form-group">
+                    <label>Usedage</label>
+                    <input type="text" formControlName="username" required class="form-control" placeholder="Enter Username"/> 
+                </div>
+                <div class="form-group">
+                    <label>Brand</label>
+                    <input type="text" formControlName="username" required  class="form-control" placeholder="Enter Username"/> 
+                </div>
+                <div class="form-group">
+                    <label>Created_Date</label>
+                    <input type="text" formControlName="username" required   class="form-control" placeholder="Enter Username"/> 
+                </div>
+                <div class="form-group">
+                    <label>Updated_Date</label>
+                    <input type="text" formControlName="username" required  class="form-control" placeholder="Enter Username"/> 
+                </div>
+                
+               
+
+                
+                
+
+
+
+                <div class="form-group">
+                    <button mat-raised-button>Submit</button>
+                  
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<!-- #userForm="ngForm"   (ngSubmit)="onSave(userForm.value)" [(ngModel)]="VaccineName" [(ngModel)]="VaccineName"[(ngModel)]="Purpose" [(ngModel)]="Usedage"[(ngModel)]="Brand"[(ngModel)]="Created_Date"[(ngModel)]="Updated_Date"-->
+
+<!-- <table border='1'>  
+    
+    <tr>  
+      <td>Id</td>  
+      <td>Name</td>  
+      <td>description</td>  
+      <td>purpose</td>  
+      <td>usedage</td>  
+      <td>brand</td>  
+      <td>create_date</td> 
+      <td>update_date</td>  
+    </tr>  
+    <tr *ngFor="let kk of vaccinedata;let ind = index">  
+         
+      <td>{{ind + 1}}</td>  
+      <td>{{kk.name}}</td>  
+      <td>{{kk.description}}</td>  
+      <td>{{kk.purpose}}</td>  
+      <td>{{kk.usedage}}</td>  
+      <td>{{kk.brand}}</td>  
+      <td>{{kk.create_date}}</td>  
+      <td>{{kk.update_date}}</td>   
+    </tr>  
+  </table>   -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form [formGroup]="myFormGroup" (ngSubmit)="onSubmit(myFormGroup.value)" novalidate>
+        <div *ngFor="let form_elem of formTemplate.form_template">
+          <div [ngSwitch]="form_elem.type">
+            <div class="form-group">
+              <div *ngSwitchCase="'VaccineName'">
+                <label>{{ form_elem.label }}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  [(ngModel)]="model.vaccinename"
+                  name="vaccinename"
+                  formControlName="vaccinename"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div *ngSwitchCase="'Description'">
+                <label>{{ form_elem.label }}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  [(ngModel)]="model.Description"
+                  name="Description"
+                  formControlName="Description"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div *ngSwitchCase="'Purpose'">
+                <label>{{ form_elem.label }}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  [(ngModel)]="model.Purpose"
+                  name="Purpose"
+                  formControlName="Purpose"
+                />
+              </div>
+            </div>
+            <div *ngSwitchCase="'Usedage'">
+              <label>{{ form_elem.label }}</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                [(ngModel)]="model.Usedage"
+                name="Usedage"
+                formControlName="Usedage"
+              />
+            </div>
+            <div *ngSwitchCase="'Brand'">
+              <label>{{ form_elem.label }}</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                [(ngModel)]="model.Brand"
+                name="Brand"
+                formControlName="Brand"
+              />
+            </div>
+            <div *ngSwitchCase="'Created_Date'">
+              <label>{{ form_elem.label }}</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                [(ngModel)]="model.Created_Date"
+                name="Created_Date"
+                formControlName="Created_Date"
+              />
+            </div>
+            <div *ngSwitchCase="'Updated_Date'">
+              <label>{{ form_elem.label }}</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                [(ngModel)]="model.Updated_Date"
+                name="Updated_Date"
+                formControlName="Updated_Date"
+              />
+            </div>
+
+            <!-- <div *ngSwitchCase="'number'">
+                <label>{{form_elem.label}}</label>
+                <input type="number" formControlName="{{form_elem.label}}" class="form-control"/>
+            </div>
+            <div *ngSwitchCase="'select'">
+                <label>{{form_elem.label}}</label>
+                <select formControlName="{{form_elem.label}}">
+                <option *ngFor="let opt of form_elem.options">
+                    {{opt}}
+                </option>
+                </select>
+            </div> -->
+          </div>
+        </div>
+        <!-- <button type="submit" class="btn btn-primary" style="margin-left: 200px;" value="{{valbutton}}">Submit</button> -->
+        <input type="submit" value="{{ valbutton }}" />
+      </form>
+    </div>
+  </div>
+</div>

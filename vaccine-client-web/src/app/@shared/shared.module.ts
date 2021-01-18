@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@app/material.module';
 import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
-  imports: [FlexLayoutModule, MaterialModule, CommonModule],
+  imports: [FlexLayoutModule, MaterialModule, CommonModule, FormsModule],
   declarations: [LoaderComponent],
   exports: [LoaderComponent],
 })

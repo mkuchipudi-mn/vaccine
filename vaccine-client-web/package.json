@@ -6,7 +6,8 @@
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && ng build --prod",
-    "start": "npm run env -s && ng serve --proxy-config proxy.conf.js",
+    "start": "npm run env -s && ng serve --proxy-config proxy.conf.js --port 4300",
+    "start:json": "npm run env -s && ng serve --proxy-config proxy.conf.json --port 4300",
     "deploy": "npm run env -s && ng deploy",
     "serve:sw": "npm run build -s && npx http-server ./www -p 4200",
     "lint": "ng lint && stylelint \"src/**/*.scss\" --syntax scss && htmlhint \"src\" --config .htmlhintrc",
@@ -54,6 +55,7 @@
     "@ionic-native/status-bar": "^5.28.0",
     "@ngx-translate/core": "^13.0.0",
     "angulartics2": "^10.0.0",
+    "bootstrap": "^4.5.3",
     "cordova-android": "^9.0.0",
     "cordova-custom-config": "^5.1.0",
     "cordova-ios": "^6.1.0",
