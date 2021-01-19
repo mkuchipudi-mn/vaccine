@@ -15,13 +15,13 @@ export class VaccineService {
   //  return this.http.get<any>(this._url1)
   // }
 
-  saveUser(vaccine: any): Observable<any> {
+  public save_Vaccine(vaccine: any): Observable<any> {
     return this.http.post('/vaccine/save', vaccine).map((response: Response) => response.json());
   }
 
   private _url1: string = 'http://localhost:8080/api/getUser/ ';
 
-  GetUser(): Observable<any> {
+  public Get_Vaccine(): Observable<any> {
     return this.http.get<any>(this._url1);
   }
 }

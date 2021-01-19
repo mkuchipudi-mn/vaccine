@@ -7,13 +7,13 @@ var Schema = mongo.Schema;
 
 var UsersSchema = new Schema(
   {
-    VaccineName: { type: String },
-    Description: { type: String },
-    Purpose: { type: String },
-    Usedage: { type: String },
-    Brand: { type: String },
-    Created_Date: { type: String },
-    Updated_Date: { type: String },
+    vaccine_Name: { type: String },
+    vaccine_Description: { type: String },
+    vaccine_Purpose: { type: String },
+    vaccine_Usedge: { type: String },
+    vaccine_Brand: { type: String },
+    vaccine_Created_Date: { type: String },
+    vaccine_Updated_Date: { type: String },
   },
   { versionKey: false }
 );

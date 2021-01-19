@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VaccineService } from './vaccine.service';
+import { VaccineService } from '../servies/vaccine.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { superhero } from './superhero';
+import { PropertyOf_Vaccine } from './PropertyOf_Vaccine';
 import form_template from '../data/form.json';
 
 @Component({
@@ -10,14 +10,14 @@ import form_template from '../data/form.json';
   styleUrls: ['./vaccine-create.component.scss'],
 })
 export class VaccineCreateComponent implements OnInit {
-  myFormGroup: FormGroup;
-  model = new superhero(1, '', '', '', '', '', '', '');
+  vaccine_FormGroup: FormGroup;
+  model = new PropertyOf_Vaccine(1, '', '', '', '', '', '', '');
   formTemplate: any = form_template;
   public Repdata: any = [];
   valbutton = 'Save';
 
-  constructor(private newService: VaccineService) {
-    this.newService.GetUser().subscribe((data) => (this.Repdata = data));
+  constructor(private vaccine_Service: VaccineService) {
+    this.vaccine_Service.Get_Vaccine().subscribe((data) => (this.Repdata = data));
   }
 
   ngOnInit() {
@@ -30,16 +30,16 @@ export class VaccineCreateComponent implements OnInit {
       console.log(input_template.label);
     });
 
-    this.myFormGroup = new FormGroup(group);
+    this.vaccine_FormGroup = new FormGroup(group);
 
-    this.myFormGroup = new FormGroup({
-      vaccinename: new FormControl(null, Validators.required),
-      Description: new FormControl(null, Validators.required),
-      Purpose: new FormControl(null, Validators.required),
-      Usedage: new FormControl(null, Validators.required),
-      Brand: new FormControl(null, Validators.required),
-      Created_Date: new FormControl(null, Validators.required),
-      Updated_Date: new FormControl(null, Validators.required),
+    this.vaccine_FormGroup = new FormGroup({
+      vaccine_Name: new FormControl(null, Validators.required),
+      vaccine_Description: new FormControl(null, Validators.required),
+      vaccine_Purpose: new FormControl(null, Validators.required),
+      vaccine_Usedge: new FormControl(null, Validators.required),
+      vaccine_Brand: new FormControl(null, Validators.required),
+      vaccine_Created_Date: new FormControl(null, Validators.required),
+      vaccine_Updated_Date: new FormControl(null, Validators.required),
     });
   }
 
@@ -49,13 +49,11 @@ export class VaccineCreateComponent implements OnInit {
   // }
 
   onSubmit = function (vaccine: any) {
-    console.log(this.myFormGroup.value);
+    console.log(this.vaccine_FormGroup.value);
     vaccine.mode = this.valbutton;
-    this.newService.saveUser(vaccine).subscribe(
+    this.vaccine_Service.save_Vaccine(vaccine).subscribe(
       (data: { data: any }) => {
         alert(data.data);
-        console.log('ravi' + vaccine);
-        // this.ngOnInit();
       },
       (error: any) => (this.errorMessage = error)
     );

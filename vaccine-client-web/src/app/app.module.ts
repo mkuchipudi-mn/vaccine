@@ -20,8 +20,8 @@ import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { VaccineCreateComponent } from './vaccine-create/vaccine-create.component';
-import { VaccineService } from './vaccine-create/vaccine.service';
+import { VaccineCreateComponent } from './vaccine/vaccine-create.component';
+import { VaccineService } from './servies/vaccine.service';
 
 @NgModule({
   imports: [
