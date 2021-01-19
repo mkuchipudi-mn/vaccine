@@ -1,0 +1,19 @@
+.container {
+  column-count: 1;
+  margin-top: 10px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.head {
+  text-align: center;
+  color: white;
+}
