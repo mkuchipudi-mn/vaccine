@@ -45,22 +45,25 @@ router.post("/save", function (req, res) {
   }
 });
 
+router.get("/get_Vaccine", function (req, res) {
+  console.log(req.query.id);
+  const body = req.query.id ? { _id: req.query.id } : {};
+
+  model.find(body, function (err, data) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(data);
+    }
+  });
+});
+
 router.post("/delete", function (req, res) {
   model.remove({ _id: req.body.id }, function (err) {
     if (err) {
       res.send(err);
     } else {
       res.send({ data: "Record has been Deleted..!!" });
-    }
-  });
-});
-
-router.get("/findAll", function (req, res) {
-  model.find({}, function (err, data) {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send(data);
     }
   });
 });

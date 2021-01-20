@@ -3,6 +3,7 @@ import { VaccineService } from '../servies/vaccine.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PropertyOf_Vaccine } from './PropertyOf_Vaccine';
 import form_template from '../data/form.json';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-vaccine-create',
@@ -11,12 +12,16 @@ import form_template from '../data/form.json';
 })
 export class VaccineCreateComponent implements OnInit {
   vaccine_FormGroup: FormGroup;
-  model = new PropertyOf_Vaccine(1, '', '', '', '', '', '', '');
+  model: any = new PropertyOf_Vaccine(1, '', '', '', '', '', '', '');
   formTemplate: any = form_template;
   public Repdata: any = [];
-  valbutton = 'Save';
+  public valbutton = 'Save';
 
-  constructor(private vaccine_Service: VaccineService) {
+  constructor(
+    private vaccine_Service: VaccineService,
+    private router: Router,
+    private _activatedRoute: ActivatedRoute
+  ) {
     this.vaccine_Service.Get_Vaccine().subscribe((data) => (this.Repdata = data));
   }
 
@@ -41,6 +46,13 @@ export class VaccineCreateComponent implements OnInit {
       vaccine_Created_Date: new FormControl(null, Validators.required),
       vaccine_Updated_Date: new FormControl(null, Validators.required),
     });
+
+    let id = this._activatedRoute.snapshot.params['id'];
+    if (id) {
+      this.vaccine_Service.getVaccine_param(id).subscribe((data) => {
+        this.model = data[0];
+      });
+    }
   }
 
   // onSubmit(){
@@ -49,6 +61,7 @@ export class VaccineCreateComponent implements OnInit {
   // }
 
   onSubmit = function (vaccine: any) {
+    vaccine.mode = this.valbutton;
     console.log(this.vaccine_FormGroup.value);
     vaccine.mode = this.valbutton;
     this.vaccine_Service.save_Vaccine(vaccine).subscribe(
@@ -57,6 +70,7 @@ export class VaccineCreateComponent implements OnInit {
       },
       (error: any) => (this.errorMessage = error)
     );
+    this.router.navigate(['/get_Vaccine']);
   };
 
   //   public Repdata:any=[];

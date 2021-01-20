@@ -19,9 +19,16 @@ export class VaccineService {
     return this.http.post('/vaccine/save', vaccine).map((response: Response) => response.json());
   }
 
-  private _url1: string = 'http://localhost:8080/api/getUser/ ';
-
   public Get_Vaccine(): Observable<any> {
-    return this.http.get<any>(this._url1);
+    return this.http.get<any>('/vaccine/get_Vaccine');
+  }
+
+  getVaccine_param(id: any): Observable<any> {
+    let parm1 = new HttpParams().set('id', id);
+    return this.http.get('/vaccine/get_Vaccine', { params: parm1 });
+  }
+
+  public delete_Vaccine(id: any) {
+    return this.http.post('/vaccine/delete', { id: id }).map((response: Response) => response.json());
   }
 }

@@ -1,0 +1,24 @@
+<table border="1" class="table">
+  <tr>
+    <td>Id</td>
+    <td>vaccine_Name</td>
+    <td>vaccine_Description</td>
+    <td>vaccine_Purpose</td>
+    <td>vaccine_Usedge</td>
+    <td>vaccine_Brand</td>
+    <td>vaccine_Created_Date</td>
+    <td>vaccine_Updated_Date</td>
+  </tr>
+  <tr *ngFor="let kk of vaccine_Data; let ind = index">
+    <td>{{ ind + 1 }}</td>
+    <td>{{ kk.vaccine_Name }}</td>
+    <td>{{ kk.vaccine_Description }}</td>
+    <td>{{ kk.vaccine_Purpose }}</td>
+    <td>{{ kk.vaccine_Usedge }}</td>
+    <td>{{ kk.vaccine_Brand }}</td>
+    <td>{{ kk.vaccine_Created_Date }}</td>
+    <td>{{ kk.vaccine_Updated_Date }}</td>
+    <td><a (click)="vaccine_Edit(kk)" style="color: black">Edit</a></td>
+    <td><a (click)="vaccine_Delete(kk._id)" style="color: black">Delete</a></td>
+  </tr>
+</table>

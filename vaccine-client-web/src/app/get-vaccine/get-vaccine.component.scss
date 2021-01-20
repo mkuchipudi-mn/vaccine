@@ -1,0 +1,18 @@
+.table,
+td,
+th {
+  color: aliceblue;
+  background-color: darkcyan;
+  text-align: center;
+}
+
+.table {
+  box-sizing: border-box;
+  border: black;
+  width: 80%;
+}
+
+th {
+  background-color: black;
+  padding-left: 8px;
+}

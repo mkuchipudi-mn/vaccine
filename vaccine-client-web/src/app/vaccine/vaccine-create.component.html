@@ -32,6 +32,8 @@
             <div class="form-group">
               <div *ngSwitchCase="'VaccineName'">
                 <label>{{ form_elem.label }}</label>
+                <input name="id" type="hidden" [(ngModel)]="model.id" />
+
                 <input
                   type="text"
                   class="form-control"
@@ -175,10 +177,10 @@
             </div> -->
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="margin-left: 200px" [disabled]="!vaccine_FormGroup.valid">
+        <!-- <button type="submit" class="btn btn-primary" style="margin-left: 200px" [disabled]="!vaccine_FormGroup.valid">
           Submit
-        </button>
-        <!-- <input type="submit" value="{{ valbutton }}" /> -->
+        </button> -->
+        <input type="submit" value="{{ valbutton }}" [disabled]="!vaccine_FormGroup.valid" />
       </form>
     </div>
   </div>

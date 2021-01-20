@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { VaccineCreateComponent } from './vaccine/vaccine-create.component';
 import { VaccineService } from './servies/vaccine.service';
+import { GetVaccineComponent } from './get-vaccine/get-vaccine.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,7 @@ import { VaccineService } from './servies/vaccine.service';
     Angulartics2Module.forRoot(),
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
-  declarations: [AppComponent, VaccineCreateComponent],
+  declarations: [AppComponent, VaccineCreateComponent, GetVaccineComponent],
   providers: [Keyboard, StatusBar, SplashScreen, VaccineService],
   bootstrap: [AppComponent],
 })
