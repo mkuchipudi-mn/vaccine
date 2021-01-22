@@ -1,0 +1,6 @@
+"use strict";
+
+module.exports = {
+    APP_ID: ENV.FACEBOOK_APP_ID || '245979216561441',
+    APP_SECRET: ENV.FACEBOOK_APP_SECRET || '36c66a5a60d981d56b9150881279cae0'
+};

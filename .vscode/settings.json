@@ -1,0 +1,35 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "debug.inlineValues": true,
+    "_prettier.singleQuote": true,
+    "prettier.printWidth": 100,
+    "_prettier.trailingComma": "all",
+    "editor.formatOnSave": true,
+    "git.enableSmartCommit": true,
+    "terminal.integrated.rendererType": "dom",
+    "gitlens.keymap": "alternate",
+    "breadcrumbs.enabled": true,
+    "javascript.validate.enable": false,
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editorAssociations": [],
+    "aws.profile": "profile:manikanta"
+  }

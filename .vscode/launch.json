@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "vaccine:src/connections/mongodb.connection.connect (nodejs12.x)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "\\KMK\\KS\\innovation\\vaccine\\vaccine-server",
+                "lambdaHandler": "src/connections/mongodb.connection.connect"
+            },
+            "lambda": {
+                "runtime": "nodejs12.x",
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}

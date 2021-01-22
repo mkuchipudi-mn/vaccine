@@ -1,0 +1,162 @@
+{
+    "welcome": [{
+            "language": "ENGLISH",
+            "content": {
+                "subject": "Welcome to Rentastico, Please verify your email.",
+                "header_quote": "born to travel",
+                "greeting": "Welcome",
+                "welcome_note": "We're excited to have you as a part of our community! Please verify your email and Start your Travel with Rentastico.",
+                "verify_button": "Verify My Email"
+            }
+        },
+        {
+            "language": "SPANISH",
+            "content": {
+                "subject": "Bienvenido a Rentastico, verifique su correo electrónico.",
+                "header_quote": "nacido para viajar",
+                "greeting": "Bienvenidos",
+                "welcome_note": "¡Estamos emocionados de tenerte como parte de nuestra comunidad! Verifique su correo electrónico y comience su viaje con Rentastico.",
+                "verify_button": "Verificar mi correo electrónico"
+            }
+        }
+    ],
+    "reset_password": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "Verify and reset your Restastico password",
+            "greeting": "Dear",
+            "reset_desc": "You've recently asked to reset the password for this Rentastico account, Click Below to Reset your Password.",
+            "reset_button": "Reset My Password"
+        }
+    }],
+    "property_posted": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "Successfully Posted Property in Rentastico",
+            "greeting": "Dear"
+        }
+    }],
+    "property_approved": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "Your Property has been Approved | Rentastico",
+            "greeting": "Hello",
+            "desc_1": "Yours Property Aproved by Rentastico",
+            "desc_2": "Please find the details below",
+            "desc_3": "Property Owner Name",
+            "desc_4": "Property Description",
+            "desc_5": "Property Location",
+            "desc_6": "Download Full Deatils",
+            "desc_7": "Post New Property"
+        }
+    }],
+
+    "property_manager_requested": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "Thank you for very much for applying for the property manager position at Renatstico | Rentastico",
+            "greeting": "Hello",
+            "desc_1": "Thank you for very much for applying for the property manager position at Renatstico. We have received your application. Our administration team will be contact you soon.",
+            "desc_2": "Deatils provided by you..",
+            "desc_3": "Manager Name",
+            "desc_4": "Location",
+            "desc_5": "Contact details"
+        }
+    }],
+
+    "property_manager_approved": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "Your request has been Approved | Rentastico",
+            "greeting": "Hello",
+            "desc_1": "Your Request for Upgrade to Manager role is Approved by Rentastico.",
+            "desc_2": "Deatils provided by you..",
+            "desc_3": "Manager Name",
+            "desc_4": "Location",
+            "desc_5": "Contact details"
+        }
+    }],
+
+    "property_manage_request": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "You got new request to manage property | Rentastico",
+            "greeting": "Hello",
+            "desc_1": "You got new request to manage property.",
+            "desc_2": "Deatils provided by you..",
+            "desc_3": "Owner Name",
+            "desc_4": "Location",
+            "desc_5": "Contact details",
+            "desc_6": "Property title",
+            "desc_7": "Property address",
+            "desc_8": "Time Period"
+        }
+    }],
+
+    "property_manager_accepted_to_manage": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "Your request has been Accepted | Rentastico",
+            "greeting": "Hello",
+            "desc_1": "Your Request for manage your property Approved by property manager.",
+            "desc_2": "Deatils provided by you..",
+            "desc_3": "Manager Name",
+            "desc_4": "Location",
+            "desc_5": "Contact details",
+            "desc_6": "Property Name",
+            "desc_7": "Property address",
+            "desc_8": "Time Period"
+        }
+    }],
+
+    "co_worker_invite_mail": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "Welcome to Rentastico.",
+            "header_quote": "born to travel",
+            "greeting": "Welcome",
+            "welcome_note": "We're excited to have you as a part of our community! Please log in with below credentials"
+        }
+    }],
+    "co_streamer_invite_mail": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "You got an Invitation for Property Live Streaming as a Host.",
+            "header_quote": "born to travel",
+            "greeting": "Welcome",
+            "desc": "You got an invitation to live stream from ",
+            "desc_0": "Property details:",
+            "desc_1": "Address : ",
+            "desc_2": "Click on below link to live stream on Rentastico.",
+            "button_1": "Join Now"
+        }
+    }],
+    "co_streamer_invite_mail_scheduled": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "You got an Invitation for Scheduled Property Live Streaming as Host",
+            "header_quote": "born to travel",
+            "greeting": "Welcome",
+            "desc": "You got an invitation to live stream from ",
+            "desc_00": "on ",
+            "desc_0": "Property details:",
+            "desc_1": "Address : ",
+            "desc_2": "Click on below link to live stream on Rentastico.",
+            "button_1": "Join Now"
+        }
+    }],
+    "co_streamer_invite_mail_reminder": [{
+        "language": "ENGLISH",
+        "content": {
+            "subject": "You got an Invitation for Reminder of Live Streaming as Host",
+            "header_quote": "born to travel",
+            "greeting": "Welcome",
+            "desc_0": "DATE : ",
+            "desc_1": "TIME : ",
+            "desc_2": "This is a reminder for Live Streaming of  ",
+            "desc_3": "How to join the live stream? ",
+            "desc_4": " Click the link to  join live stream at the specified time and date. ",
+            "button_1": "Join Live Stream"
+        }
+    }]
+}

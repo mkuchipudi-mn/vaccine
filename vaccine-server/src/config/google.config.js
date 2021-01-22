@@ -1,0 +1,9 @@
+"use strict";
+
+
+module.exports = {
+    APP_ID: ENV.GOOGLE_APP_ID || '637606877329-340pmu9lc9hu03nbgu3hegqs58ij1620.apps.googleusercontent.com',
+    APP_SECRET: ENV.GOOGLE_APP_SECRET || 'W39KdIyRfGprPoNZMX7FVlrs',
+    RE_CAPTCHA_SITE_KEY: ENV.RE_CAPTCHA_SITE_KEY || '6LdsdrUZAAAAABmnMqW2n3VRwY1SHb-sTxr7MeX5',
+    RE_CAPTCHA_SECRET_KEY: ENV.RE_CAPTCHA_SECRET_KEY || '6LdsdrUZAAAAAMNYo9ARnIq5x3GIPQIsaeXzBCT_'
+};

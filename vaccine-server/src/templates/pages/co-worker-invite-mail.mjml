@@ -1,0 +1,36 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#fff" width="1000px">
+    <mj-include path="{{header}}" />
+    <mj-section border="1px solid #a6a6a6">
+      <mj-column>
+        <mj-text font-size="20px">
+          {{content.greeting}} <strong>{{name}}</strong>.
+        </mj-text>
+        <mj-text font-size="18px" align="left">
+          {{content.welcome_note}}
+        </mj-text>
+
+
+
+        <mj-text font-size="18px" align="left">
+          Login with below credentials
+        </mj-text>
+        <mj-text font-size="18px" align="center">
+          Agenecy reference: {{agency_ref}}
+        </mj-text>
+        <mj-text font-size="18px" align="center">
+          Email: {{to}}
+        </mj-text>
+        <mj-text font-size="18px" align="center">
+          Password: {{password}}
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+    <mj-include path="{{footer}}" />
+  </mj-body>
+</mjml>

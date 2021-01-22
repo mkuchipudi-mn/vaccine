@@ -1,0 +1,35 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#fff" width="1000px">
+    <mj-include path="{{header}}" />
+    <mj-section border="1px solid #a6a6a6">
+      <mj-column>
+        <mj-text font-size="20px">
+          {{content.greeting}}
+        </mj-text>
+        <mj-text font-size="18px" align="left">
+          {{content.desc}} <strong> {{invitee_name}} </strong>
+          {{content.desc_00}} {{scheduled_time}}
+        </mj-text>
+
+        <mj-text font-size="18px" align="left">
+          <p>{{content.desc_0}}</p>
+          <p> {{content.desc_1}} {{property_address}}.</p>
+        </mj-text>
+
+        <mj-text font-size="18px" align="center">
+          {{content.desc_2}}
+        </mj-text>
+          <mj-button font-family="Helvetica" background-color="#f45e43" color="white" href="{{url}}">
+          
+          {{content.button_1}}
+          </mj-button>
+
+      </mj-column>
+    </mj-section>
+    <mj-include path="{{footer}}" />
+  </mj-body>
+</mjml>

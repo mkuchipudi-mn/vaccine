@@ -1,0 +1,41 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+     
+      p{
+      font-size:20px
+      }
+      i{
+       font-size:20px;
+      font-family:"Lato, Helvetica, Arial, sans-serif";
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#fff" width="1000px">
+    <mj-include path="{{header}}" />
+    <mj-section border="1px solid #a6a6a6">
+      
+      <mj-column>
+         <mj-image width="300px" src="https://www.springforeststudio.com/wp-content/uploads/2018/11/062001.png" />
+        
+        <mj-text font-size="25px"><b>{{content.desc_0}}</b>  <br> <p> {{date}} </br></p></mj-text>
+  
+          <mj-text font-size="20px" padding-top="0px"><b>{{content.desc_1}}</b> {{time}}</mj-text>
+         
+                  <mj-divider border-width="2px" width="76%" border-style="solid" border-color="lightgrey" />
+          <mj-text>{{content.desc_2}} {{invitee_name}}.</i> </mj-text>
+           <mj-text font-size="16px" font-family="Lato, Helvetica, Arial, sans-serif">1 day is left for the Live Stream.</b> </mj-text>
+         
+          <mj-text font-size="17px">{{content.desc_3}}</mj-text>
+          <mj-text font-size="15px">{{content.desc_4}}</mj-text>
+            <mj-button font-family="Helvetica" background-color="blue" color="white">
+              {{content.button_1}}
+         </mj-button>
+            
+          
+      </mj-column>
+          
+    </mj-section>
+    <mj-include path="{{footer}}" />
+  </mj-body>
+</mjml>

@@ -1,0 +1,5 @@
+<mj-section background-color="linear-gradient(146deg, #4848e6 53%, rgba(227, 26, 83, 0.59) 64%);">
+  <mj-column padding-left="25px" vertical-align="top" width="30%">
+    <mj-image src="https://i.ibb.co/tqDz4tN/rentastico-logo.png" alt="rentastico logo" align="left" border="none" padding="0px"></mj-image>
+  </mj-column>
+</mj-section>

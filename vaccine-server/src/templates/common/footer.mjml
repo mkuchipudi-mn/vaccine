@@ -1,0 +1,20 @@
+<mj-section background-color="#009FE3">
+  <mj-column>
+    <mj-divider border-color="#ffffff" border-width="2px" border-style="solid" padding="0 20px 0 20px"></mj-divider>
+    <mj-text align="center" font-size="16px" color="#fff">
+      © 2020 Rentastico OPC Pvt Ltd.
+      <br /><br />
+      Hyderabad, Telangana, India-500084.
+    </mj-text>
+    <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+      <mj-social-element name="facebook-noshare" href="https://www.facebook.com/">
+      </mj-social-element>
+      <mj-social-element name="linkedin-noshare" href="https://www.linkedin.com/feed/">
+      </mj-social-element>
+      <mj-social-element name="twitter-noshare" href="https://twitter.com/home">
+      </mj-social-element>
+      <mj-social-element name="pinterest-noshare" href="https://in.pinterest.com/">
+      </mj-social-element>
+    </mj-social>
+  </mj-column>
+</mj-section>
