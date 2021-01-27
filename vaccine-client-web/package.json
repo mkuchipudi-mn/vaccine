@@ -71,6 +71,7 @@
     "ngx-deploy-docker": "0.0.5",
     "ramda": "^0.27.1",
     "rxjs": "^6.6.3",
+    "rxjs-compat": "^6.6.3",
     "tslib": "^2.0.1",
     "zone.js": "~0.10.3"
   },

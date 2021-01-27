@@ -7,13 +7,13 @@ var Schema = mongo.Schema;
 
 var UsersSchema = new Schema(
   {
-    vaccine_Name: { type: String },
-    vaccine_Description: { type: String },
-    vaccine_Purpose: { type: String },
-    vaccine_Usedge: { type: String },
-    vaccine_Brand: { type: String },
-    vaccine_Created_Date: { type: String },
-    vaccine_Updated_Date: { type: String },
+    vaccineName: { type: String },
+    vaccineDescription: { type: String },
+    vaccinePurpose: { type: String },
+    vaccineUsedge: { type: String },
+    vaccineBrand: { type: String },
+    vaccineStartDate: { type: Date },
+    vaccinendDate: { type: Date },
   },
   { versionKey: false }
 );
@@ -31,18 +31,25 @@ router.post("/save", function (req, res) {
       }
     });
   } else {
-    model.findByIdAndUpdate(
-      req.body.id,
-      { name: req.body.name, address: req.body.address },
-      function (err, data) {
-        if (err) {
-          res.send(err);
-        } else {
-          res.send({ data: "Record has been Updated..!!" });
-        }
+    model.findByIdAndUpdate(req.body.id, function (err, data) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send({ data: "Record has been Updated..!!" });
       }
-    );
+    });
   }
+});
+
+router.put("/save", function (req, res, next) {
+  console.log(req.body);
+  model.findByIdAndUpdate(req.body.id, req.body, function (err, data) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send({ data: "Record has been Updated..!!" });
+    }
+  });
 });
 
 router.get("/get_Vaccine", function (req, res) {

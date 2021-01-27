@@ -22,11 +22,11 @@
     },
     {
       "type": "Created_Date",
-      "label": "Created_Date"
+      "label": "Start_Date"
     },
     {
       "type": "Updated_Date",
-      "label": "Updated_Date"
+      "label": "End_Date"
     },
 
     {

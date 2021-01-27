@@ -22,7 +22,6 @@
       <td>{{kk.update_date}}</td>   
     </tr>  
   </table>   -->
-
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
@@ -38,12 +37,12 @@
                   type="text"
                   class="form-control"
                   required
-                  [(ngModel)]="model.vaccine_Name"
-                  name="vaccine_Name"
-                  formControlName="vaccine_Name"
+                  [(ngModel)]="model.vaccineName"
+                  name="vaccineName"
+                  formControlName="vaccineName"
                 />
                 <span
-                  *ngIf="!vaccine_FormGroup.get('vaccine_Name').valid && vaccine_FormGroup.get('vaccine_Name').touched"
+                  *ngIf="!vaccine_FormGroup.get('vaccineName').valid && vaccine_FormGroup.get('vaccineName').touched"
                   class="help-block"
                   >Please Enter vaccinename</span
                 >
@@ -56,14 +55,14 @@
                   type="text"
                   class="form-control"
                   required
-                  [(ngModel)]="model.vaccine_Description"
-                  name="vaccine_Description"
-                  formControlName="vaccine_Description"
+                  [(ngModel)]="model.vaccineDescription"
+                  name="vaccineDescription"
+                  formControlName="vaccineDescription"
                 />
                 <span
                   *ngIf="
-                    !vaccine_FormGroup.get('vaccine_Description').valid &&
-                    vaccine_FormGroup.get('vaccine_Description').touched
+                    !vaccine_FormGroup.get('vaccineDescription').valid &&
+                    vaccine_FormGroup.get('vaccineDescription').touched
                   "
                   class="help-block"
                   >Please Enter Description</span
@@ -77,13 +76,13 @@
                   type="text"
                   class="form-control"
                   required
-                  [(ngModel)]="model.vaccine_Purpose"
-                  name="vaccine_Purpose"
-                  formControlName="vaccine_Purpose"
+                  [(ngModel)]="model.vaccinePurpose"
+                  name="vaccinePurpose"
+                  formControlName="vaccinePurpose"
                 />
                 <span
                   *ngIf="
-                    !vaccine_FormGroup.get('vaccine_Purpose').valid && vaccine_FormGroup.get('vaccine_Purpose').touched
+                    !vaccine_FormGroup.get('vaccinePurpose').valid && vaccine_FormGroup.get('vaccinePurpose').touched
                   "
                   class="help-block"
                   >Please Enter Purpose</span
@@ -96,14 +95,12 @@
                 type="text"
                 class="form-control"
                 required
-                [(ngModel)]="model.vaccine_Usedge"
-                name="vaccine_Usedge"
-                formControlName="vaccine_Usedge"
+                [(ngModel)]="model.vaccineUsedge"
+                name="vaccineUsedge"
+                formControlName="vaccineUsedge"
               />
               <span
-                *ngIf="
-                  !vaccine_FormGroup.get('vaccine_Usedge').valid && vaccine_FormGroup.get('vaccine_Usedge').touched
-                "
+                *ngIf="!vaccine_FormGroup.get('vaccineUsedge').valid && vaccine_FormGroup.get('vaccineUsedge').touched"
                 class="help-block"
                 >Please Enter Usedage</span
               >
@@ -114,12 +111,12 @@
                 type="text"
                 class="form-control"
                 required
-                [(ngModel)]="model.vaccine_Brand"
-                name="vaccine_Brand"
-                formControlName="vaccine_Brand"
+                [(ngModel)]="model.vaccineBrand"
+                name="vaccineBrand"
+                formControlName="vaccineBrand"
               />
               <span
-                *ngIf="!vaccine_FormGroup.get('vaccine_Brand').valid && vaccine_FormGroup.get('vaccine_Brand').touched"
+                *ngIf="!vaccine_FormGroup.get('vaccineBrand').valid && vaccine_FormGroup.get('vaccineBrand').touched"
                 class="help-block"
                 >Please Enter Brand</span
               >
@@ -127,40 +124,41 @@
             <div *ngSwitchCase="'Created_Date'">
               <label>{{ form_elem.label }}</label>
               <input
-                type="text"
+                type="date"
                 class="form-control"
                 required
-                [(ngModel)]="model.vaccine_Created_Date"
-                name="vaccine_Created_Date"
-                formControlName="vaccine_Created_Date"
+                [(ngModel)]="model.vaccineStartDate"
+                name="vaccineStartDate"
+                formControlName="vaccineStartDate"
               />
-              <span
+              <!-- <span
                 *ngIf="
-                  !vaccine_FormGroup.get('vaccine_Created_Date').valid &&
-                  vaccine_FormGroup.get('vaccine_Created_Date').touched
+                  !vaccine_FormGroup.get('vaccineStartDate').valid &&
+                  vaccine_FormGroup.get('vaccineStartDate').touched
                 "
                 class="help-block"
                 >Please Enter Created_Date</span
-              >
+              > -->
             </div>
             <div *ngSwitchCase="'Updated_Date'">
               <label>{{ form_elem.label }}</label>
               <input
-                type="text"
+                type="date"
                 class="form-control"
                 required
-                [(ngModel)]="model.vaccine_Updated_Date"
-                name="vaccine_Updated_Date"
-                formControlName="vaccine_Updated_Date"
+                [(ngModel)]="model.vaccinendDate"
+                name="vaccinendDate"
+                formControlName="vaccinendDate"
               />
-              <span
+              <!-- <span
                 *ngIf="
-                  !vaccine_FormGroup.get('vaccine_Updated_Date').valid &&
-                  vaccine_FormGroup.get('vaccine_Updated_Date').touched
+                  !vaccine_FormGroup.get('vaccinendDate').valid &&
+                  vaccine_FormGroup.get('vaccinendDate').touched
                 "
                 class="help-block"
                 >Please Enter Updated_Date</span
-              >
+              > -->
+              <label *ngIf="vaccine_FormGroup.errors">{{ vaccine_FormGroup.errors?.dates | json }}</label>
             </div>
 
             <!-- <div *ngSwitchCase="'number'">

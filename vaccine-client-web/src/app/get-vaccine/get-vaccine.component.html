@@ -1,24 +1,25 @@
 <table border="1" class="table">
   <tr>
-    <td>Id</td>
-    <td>vaccine_Name</td>
-    <td>vaccine_Description</td>
-    <td>vaccine_Purpose</td>
-    <td>vaccine_Usedge</td>
-    <td>vaccine_Brand</td>
-    <td>vaccine_Created_Date</td>
-    <td>vaccine_Updated_Date</td>
+    <th>Id</th>
+    <th>vaccine_Name</th>
+    <th>vaccine_Description</th>
+    <th>vaccine_Purpose</th>
+    <th>vaccine_Usedge</th>
+    <th>vaccine_Brand</th>
+    <th>vaccine_Created_Date</th>
+    <th>vaccine_Updated_Date</th>
   </tr>
+
   <tr *ngFor="let kk of vaccine_Data; let ind = index">
     <td>{{ ind + 1 }}</td>
-    <td>{{ kk.vaccine_Name }}</td>
-    <td>{{ kk.vaccine_Description }}</td>
-    <td>{{ kk.vaccine_Purpose }}</td>
-    <td>{{ kk.vaccine_Usedge }}</td>
-    <td>{{ kk.vaccine_Brand }}</td>
-    <td>{{ kk.vaccine_Created_Date }}</td>
-    <td>{{ kk.vaccine_Updated_Date }}</td>
-    <td><a (click)="vaccine_Edit(kk)" style="color: black">Edit</a></td>
-    <td><a (click)="vaccine_Delete(kk._id)" style="color: black">Delete</a></td>
+    <td>{{ kk.vaccineName }}</td>
+    <td>{{ kk.vaccineDescription }}</td>
+    <td>{{ kk.vaccinePurpose }}</td>
+    <td>{{ kk.vaccineUsedge }}</td>
+    <td>{{ kk.vaccineBrand }}</td>
+    <td>{{ kk.vaccineStartDate | date: 'MM/dd/yyyy' }}</td>
+    <td>{{ kk.vaccinendDate | date: 'MM/dd/yyyy' }}</td>
+    <td><a (click)="vaccine_Edit(kk)" style="color: black" class="btn btn-primary">Edit</a></td>
+    <td><a (click)="vaccine_Delete(kk._id)" style="color: black" class="btn btn-danger">Delete</a></td>
   </tr>
 </table>

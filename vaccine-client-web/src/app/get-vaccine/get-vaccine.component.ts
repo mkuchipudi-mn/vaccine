@@ -10,7 +10,7 @@ import { PropertyOf_Vaccine } from '@app/vaccine/PropertyOf_Vaccine';
 })
 export class GetVaccineComponent implements OnInit {
   public vaccine_Data: any = [];
-  model = new PropertyOf_Vaccine(1, '', '', '', '', '', '', '');
+  model = new PropertyOf_Vaccine('', '', '', '', '', '', new Date(), new Date());
   public valbutton = 'Save';
   public getVaccine_param: PropertyOf_Vaccine[];
   products: PropertyOf_Vaccine[] = [];
