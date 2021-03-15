@@ -14,14 +14,34 @@ export class GetVaccineComponent implements OnInit {
   public valbutton = 'Save';
   public getVaccine_param: PropertyOf_Vaccine[];
   products: PropertyOf_Vaccine[] = [];
+  displayedColumns = [
+    'Id',
+    'vaccine_Name',
+    'vaccine_Description',
+    'vaccine_Purpose',
+    'vaccine_Usedge',
+    'vaccine_Brand',
+    'vaccine_Created_Date',
+    'vaccine_Updated_Date',
+    'Action',
+  ];
+
   constructor(
     private vaccine_Serives: VaccineService,
     private _activatedRoute: ActivatedRoute,
     private _router: Router
   ) {
-    this.vaccine_Serives.Get_Vaccine().subscribe((data) => (this.vaccine_Data = data));
+    //  this.vaccine_Serives.Get_Vaccine().subscribe((data) => (this.vaccine_Data = data));
+    //  console.log(this.vaccine_Data);
+    this.Get_Vaccine();
   }
 
+  public Get_Vaccine(): void {
+    this.vaccine_Serives.Get_Vaccine().subscribe((data: any) => {
+      console.log(data);
+      this.vaccine_Data = data;
+    });
+  }
   ngOnInit(): void {}
 
   vaccine_Edit = function (kk: any) {

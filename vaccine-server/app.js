@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api/vaccine", vaccineRouter);
-// app.use('/api/user', vaccineRouter);
+// app.use(express.static('routes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.json({ limit: "5mb" }));
@@ -47,7 +47,11 @@ app.use(function (req, res, next) {
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next(createError(404));
+  var err = new Error("Not Found");
+  err.status = 404;
+  next(err);
+
+  // next(createError(404));
 });
 
 // error handler

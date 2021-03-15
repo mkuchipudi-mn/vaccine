@@ -1,21 +1,29 @@
-.table,
-td,
-th {
-  color: aliceblue;
-  background-color: darkcyan;
-  text-align: center;
-  margin-top: 50px;
-  margin-left: 100px;
-}
+// .table,
+// td,
+// th {
+//   color: aliceblue;
+//   background-color: darkcyan;
+//   text-align: center;
+//   margin-top: 50px;
+//   margin-left: 100px;
+// }
 
-.table {
-  box-sizing: border-box;
-  border: black;
+// .table {
+//   box-sizing: border-box;
+//   border: black;
+//   width: 80%;
+// }
+
+// th {
+
+//   color: black;
+// }
+
+// .mat-elevation-z8{
+//   margin-left: 40px;
+// }
+table {
   width: 80%;
-}
-
-th {
-  // background-color: white;
-  // padding-left: 8px;
-  color: black;
+  margin: auto;
+  margin-top: 20px;
 }

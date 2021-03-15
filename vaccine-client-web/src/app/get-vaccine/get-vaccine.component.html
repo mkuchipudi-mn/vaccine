@@ -1,4 +1,4 @@
-<table border="1" class="table">
+<!-- <table border="1" class="table">
   <tr>
     <th>Id</th>
     <th>vaccine_Name</th>
@@ -22,4 +22,63 @@
     <td><a (click)="vaccine_Edit(kk)" style="color: black" class="btn btn-primary">Edit</a></td>
     <td><a (click)="vaccine_Delete(kk._id)" style="color: black" class="btn btn-danger">Delete</a></td>
   </tr>
+</table> -->
+
+<table mat-table [dataSource]="vaccine_Data" class="mat-elevation-z8">
+  <ng-container matColumnDef="Id">
+    <th mat-header-cell *matHeaderCellDef>Id</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="vaccine_Name">
+    <th mat-header-cell *matHeaderCellDef>vaccine_Name</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element">{{ element.vaccineName }}</td>
+  </ng-container>
+  <ng-container matColumnDef="vaccine_Description">
+    <th mat-header-cell *matHeaderCellDef>vaccine_Description</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element">{{ element.vaccineDescription }}</td>
+  </ng-container>
+  <ng-container matColumnDef="vaccine_Purpose">
+    <th mat-header-cell *matHeaderCellDef>vaccine_Purpose</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element">{{ element.vaccinePurpose }}</td>
+  </ng-container>
+  <ng-container matColumnDef="vaccine_Usedge">
+    <th mat-header-cell *matHeaderCellDef>vaccine_Usedge</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element">{{ element.vaccineUsedge }}</td>
+  </ng-container>
+  <ng-container matColumnDef="vaccine_Brand">
+    <th mat-header-cell *matHeaderCellDef>vaccine_Brand</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element">{{ element.vaccineBrand }}</td>
+  </ng-container>
+  <ng-container matColumnDef="vaccine_Created_Date">
+    <th mat-header-cell *matHeaderCellDef>vaccine_Created_Date</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element">{{ element.vaccineStartDate | date: 'MM/dd/yyyy' }}</td>
+  </ng-container>
+  <ng-container matColumnDef="vaccine_Updated_Date">
+    <th mat-header-cell *matHeaderCellDef>vaccine_Updated_Date</th>
+    &nbsp;
+    <td mat-cell *matCellDef="let element">{{ element.vaccinendDate | date: 'MM/dd/yyyy' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Action">
+    <th mat-header-cell *matHeaderCellDef>Action</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button matTooltip="Edit" (click)="vaccine_Edit(element)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Delete" (click)="vaccine_Delete(element._id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>

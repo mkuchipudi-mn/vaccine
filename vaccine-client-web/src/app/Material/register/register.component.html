@@ -1,4 +1,4 @@
-<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center">
   <mat-card class="box">
     <mat-card-header>
       <mat-card-title>Register</mat-card-title>
@@ -47,16 +47,22 @@
           </mat-error>
         </mat-form-field>
 
-        <!-- <mat-form-field class="example-full-width">
-            <mat-label>Choose designation</mat-label>
-            <mat-select>
-              <mat-option [value]="user" *ngFor="let user of User">{{user}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field> -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Choose designation</mat-label>
+          <mat-select [(value)]="selected" [formControl]="ChooseDesignation">
+            <mat-option [value]="user" *ngFor="let user of User">{{ user }} </mat-option>
+          </mat-select>
+          <mat-error *ngIf="ChooseDesignation.hasError('required')">
+            ChooseDesignation is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <p>You selected: {{ selected }}</p>
       </mat-card-content>
 
       <button mat-stroked-button color="accent" class="btn-block">Register</button>
     </form>
   </mat-card>
 </div>
+
+<button mat-button (click)="openDialog()">Launch dialog</button>

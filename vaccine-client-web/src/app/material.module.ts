@@ -48,6 +48,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatDialogComponent } from './Material/mat-dialog/mat-dialog.component';
 
 @NgModule({
   exports: [
@@ -91,5 +92,6 @@ import { MatTreeModule } from '@angular/material/tree';
     MatTooltipModule,
     MatTreeModule,
   ],
+  declarations: [MatDialogComponent],
 })
 export class MaterialModule {}
